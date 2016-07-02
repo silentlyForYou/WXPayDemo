@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WXApiDelegate {
 
     var window: UIWindow?
 
@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         WXApi.registerApp("wxb4ba3c02aa476ea1")
+
         return true
     }
 
@@ -44,12 +45,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
-        return WXApi.handleOpenURL(url, delegate: WXApiManager.sharedManager())
+        return WXApi.handleOpenURL(url, delegate: self)
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return WXApi.handleOpenURL(url, delegate: WXApiManager.sharedManager())
+        return WXApi.handleOpenURL(url, delegate: self)
     }
 
+    func onResp(resp: BaseResp!) {
+        if resp.isKindOfClass(PayResp) {
+            var result = ""
+            
+            switch resp.errCode {
+            case 0:
+                result = "支付成功"
+                
+            case -2:
+                result = "支付取消"
+                
+            default:
+                result = "支付失败"
+                
+                break
+            }
+            
+            UIAlertView(title: "支付信息", message: result, delegate: self, cancelButtonTitle: "ok").show()
+            
+        }
+    }
 }
 

@@ -15,7 +15,6 @@
 		C9B81B211D25F913008F222F /* WXPayDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B81B201D25F913008F222F /* WXPayDemoTests.swift */; };
 		C9B81B2C1D25F913008F222F /* WXPayDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B81B2B1D25F913008F222F /* WXPayDemoUITests.swift */; };
 		C9B81B451D25FA2C008F222F /* RespForWeChatViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9B81B3E1D25FA2C008F222F /* RespForWeChatViewController.mm */; };
-		C9B81B461D25FA2C008F222F /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B81B401D25FA2C008F222F /* WXApiManager.m */; };
 		C9B81B471D25FA2C008F222F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B81B421D25FA2C008F222F /* libWeChatSDK.a */; };
 		C9B81B491D25FE38008F222F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B81B481D25FE38008F222F /* libz.tbd */; };
 		C9B81B4B1D25FE3E008F222F /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B81B4A1D25FE3E008F222F /* libsqlite3.0.tbd */; };
@@ -59,8 +58,6 @@
 		C9B81B2D1D25F913008F222F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B81B391D25F95F008F222F /* WXPayDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WXPayDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9B81B3E1D25FA2C008F222F /* RespForWeChatViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RespForWeChatViewController.mm; sourceTree = "<group>"; };
-		C9B81B3F1D25FA2C008F222F /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
-		C9B81B401D25FA2C008F222F /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		C9B81B421D25FA2C008F222F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		C9B81B431D25FA2C008F222F /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		C9B81B441D25FA2C008F222F /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				C9B81B3E1D25FA2C008F222F /* RespForWeChatViewController.mm */,
-				C9B81B3F1D25FA2C008F222F /* WXApiManager.h */,
-				C9B81B401D25FA2C008F222F /* WXApiManager.m */,
 				C9B81B411D25FA2C008F222F /* WXSdk */,
 			);
 			path = WXPay;
@@ -327,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B81B0E1D25F913008F222F /* ViewController.swift in Sources */,
-				C9B81B461D25FA2C008F222F /* WXApiManager.m in Sources */,
 				C9B81B0C1D25F913008F222F /* AppDelegate.swift in Sources */,
 				C9B81B451D25FA2C008F222F /* RespForWeChatViewController.mm in Sources */,
 			);
@@ -572,6 +566,7 @@
 				C9B81B321D25F913008F222F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B81B331D25F913008F222F /* Build configuration list for PBXNativeTarget "WXPayDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +575,7 @@
 				C9B81B351D25F913008F222F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9B81B361D25F913008F222F /* Build configuration list for PBXNativeTarget "WXPayDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -588,6 +584,7 @@
 				C9B81B381D25F913008F222F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
